@@ -12,3 +12,36 @@ $RECYCLE.BIN/
 
 # Node.js
 node_modules/
+
+# 依赖目录（微信/前端最重要）
+node_modules/
+miniprogram_npm/
+
+# 编译/构建产物
+dist/
+build/
+*.log
+
+# 微信开发者工具/IDE 缓存
+.project
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# 微信小程序本地配置（可选，不传个人配置）
+project.config.json
+project.private.config.json
+
+# C语言面试练习的常规忽略（保留你原有部分需求）
+*.o
+*.obj
+*.exe
+*.out
+*.dll
+*.so
+*.dylib
+
+# 调试/临时
+.tmp/
+.cache/
