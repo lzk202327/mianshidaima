@@ -1,0 +1,22 @@
+<view class="page-container">
+  <view class="title">药物服用事项</view>
+
+  <view class="tip" wx:if="{{boxCells.length === 0 || !hasMed}}">
+    暂无药品，请先在"药物服用管理"中添加
+  </view>
+
+  <!-- 药盒 -->
+  <view class="medicine-box">
+    <view class="box-cell" wx:for="{{boxCells}}" wx:key="index">
+      <block wx:if="{{item.med}}">
+        <view class="med-name">{{item.med.name}}</view>
+        <view class="med-time">{{item.med.time}}</view>
+      </block>
+      <block wx:else>
+        <view class="empty">空</view>
+      </block>
+    </view>
+  </view>
+
+  <view class="desc">以上药盒根据您的药物管理自动生成</view>
+</view>

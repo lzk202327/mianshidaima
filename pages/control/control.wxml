@@ -1,0 +1,19 @@
+<view class="box">
+  <view class="title">药物服用管理</view>
+
+  <input class="inp" placeholder="药名" value="{{name}}" bindinput="onNameInput" />
+  <picker mode="time" value="{{time}}" bindchange="onTimeChange">
+    <view class="picker">{{time || '请选择服药时间'}}</view>
+  </picker>
+
+  <button class="btn" bindtap="addMed">保存药品</button>
+  <button class="btn test" bindtap="testRemind">测试强力震动</button>
+  <button class="btn back" bindtap="goHome">返回首页</button>
+
+  <view wx:for="{{medList}}" wx:key="idx" class="item">
+    <text>{{index + 1}}. {{item.name}} —— {{item.time}}</text>
+    <text class="del" bindtap="delMed" data-idx="{{index}}">删除</text>
+  </view>
+
+  <view class="count">共 {{medList.length}} 条</view>
+</view>

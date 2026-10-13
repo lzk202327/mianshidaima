@@ -1,0 +1,117 @@
+/* pages/notice/notice.wxss */
+.page-container {
+  padding: 40rpx;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+  text-align: center;
+}
+
+/* 药盒外壳 */
+.medicine-box {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #e8f5e9;
+  border: 4rpx solid #81c784;
+  border-radius: 20rpx;
+  padding: 10rpx;
+  box-shadow: 0 10rpx 20rpx rgba(0,0,0,0.1);
+}
+
+/* 单个格子 */
+.box-cell {
+  width: 31%;
+  height: 180rpx;
+  border: 2rpx solid #a5d6a7;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+  margin: 5rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.med-name {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #d32f2f;
+}
+.med-time {
+  font-size: 22rpx;
+  color: #666;
+  margin-top: 8rpx;
+}
+
+/* 空格子的"＋添加" */
+.add-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+.plus {
+  font-size: 50rpx;
+  line-height: 1;
+}
+
+/* 删除按钮 */
+.del-btn {
+  position: absolute;
+  top: 5rpx;
+  right: 10rpx;
+  font-size: 36rpx;
+  color: #999;
+}
+
+/* 弹窗遮罩 */
+.popup-mask {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.popup {
+  width: 600rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 40rpx;
+}
+.popup-title {
+  font-size: 34rpx;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+.popup-input {
+  border: 2rpx solid #ddd;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  font-size: 28rpx;
+}
+.popup-picker {
+  border: 2rpx solid #ddd;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  margin-bottom: 30rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+.popup-confirm {
+  background-color: #4caf50;
+  color: white;
+  margin-bottom: 15rpx;
+}
+.popup-cancel {
+  background-color: #ddd;
+  color: #333;
+}

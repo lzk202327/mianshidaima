@@ -1,0 +1,30 @@
+<view class="container">
+  <!-- 输入区 -->
+  <view class="card">
+    <picker mode="date" bindchange="onDateChange">
+      <view class="picker">📅 {{date || '选择日期'}}</view>
+    </picker>
+    
+    <input class="input" placeholder="血压 如130/85" 
+           bindinput="onBpInput" value="{{bloodPressure}}"/>
+    <input class="input" placeholder="血糖 如5.6" 
+           bindinput="onBsInput" value="{{bloodSugar}}"/>
+    
+    <button class="save-btn" bindtap="saveRecord">保存记录</button>
+  </view>
+
+  <!-- 历史列表 -->
+  <view class="list">
+    <view wx:for="{{recordList}}" wx:key="time" class="item">
+      <view class="info">
+        <text>📆 {{item.date}}</text>
+        <text>💓 血压:{{item.bp}}</text>
+        <text>🩸 血糖:{{item.bs}}</text>
+      </view>
+      <!-- 关键：data-index="{{index}}" 传给js -->
+      <button class="del-btn" size="mini" 
+              bindtap="delRecord" 
+              data-index="{{index}}">删除</button>
+    </view>
+  </view>
+</view>

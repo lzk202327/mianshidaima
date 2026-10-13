@@ -1,0 +1,7 @@
+<view class="home-wrap">
+  <text class="title">小助手</text>
+  
+  <button class="home-btn btn-main" bindtap="status">身体数据提交</button>
+  <button class="home-btn btn-demo" bindtap="notice">药物服用事项</button>
+  <button class="home-btn btn-ghost" bindtap="control">药物服用管理</button>
+</view>
